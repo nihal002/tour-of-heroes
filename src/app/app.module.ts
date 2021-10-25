@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
+import { AlertModule } from 'ngx-bootstrap/alert';
+
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     HeroesComponent
   ],
   imports: [
+    AlertModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     FormsModule

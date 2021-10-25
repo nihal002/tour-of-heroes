@@ -1,71 +1,10 @@
-
-<!-- <div>
-    <label>Hero name: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
-
-<div class="bg-primary col-sm-4">
-    <span>
-        id: 
-    </span>
-        {{hero.id}}
-</div>
-
-
-<div class="bg-success col-sm-4">
-    <span>
-        name:
-    </span>
-        {{hero.name}}
-</div>
-
-
-
-
-<div>
-    <label for=""> id</label>
-    <input id="id" [(ngModel)]="hero.id" placeholder="ìd">
-</div> -->
-
-
-
-
-
-<!-- <h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul> -->
-
-
- <!-- <div class="container d-flex justify-content-center mt-100">
-    <div class="row">
-        <div class="col-md-6"> <button type="button" class="modal-button" data-toggle="modal" data-target="#myModal">Open Modal</button> </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="card">
-            <div class="card-img"> <img class="img-fluid" src="https://i.imgur.com/uBx4f4L.png"> </div>
-            <div class="card-title">
-                <p>Oops...</p>
-            </div>
-            <div class="card-text">
-                <p>Something went wrong. Please, try again.</p>
-            </div> <button class="btn">Try again</button>
-        </div>
-    </div>
-</div>  -->
-
-
 <div class="row">
     <div class="card col-sm4" style="width: 20rem; margin-bottom: 20px;" *ngFor="let hero of heroes">
         <img src="https://pixy.org/src/477/4774988.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{hero.name}}</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button type="button" class="btn btn-primary" (click)="onSelect(hero)" data-toggle="modal" data-target="#exampleModalCenter">
+          <button type="button" class="btn btn-primary" (click)="onSelect(hero)" >
             Select Hero
           </button>
 
@@ -73,14 +12,6 @@
       </div>
 </div>
 
-<div *ngIf="selectedHero">
-
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-  </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 

@@ -1,6 +1,7 @@
-<h2 class="bg-danger">
-    {{hero.name | uppercase}} Details
-</h2>
+<div>
+    <label>Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
 
 <div class="bg-primary col-sm-4">
     <span>
@@ -9,7 +10,6 @@
         {{hero.id}}
 </div>
 
-<br>
 
 <div class="bg-success col-sm-4">
     <span>
@@ -17,3 +17,12 @@
     </span>
         {{hero.name}}
 </div>
+
+
+
+
+<div>
+    <label for=""> id</label>
+    <input id="id" [(ngModel)]="hero.id" placeholder="ìd">
+</div>
+
